@@ -14,6 +14,12 @@
 		CF1A1B8D22B8BED30067E392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8B22B8BED30067E392 /* LaunchScreen.storyboard */; };
 		CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */; };
 		CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */; };
+		CF7BB6EA22B8F12A00BCD9C4 /* Nivel1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E922B8F12A00BCD9C4 /* Nivel1Controller.swift */; };
+		CF7BB6EC22B8FB1300BCD9C4 /* Nivel2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6EB22B8FB1300BCD9C4 /* Nivel2Controller.swift */; };
+		CF7BB6EE22B8FB2300BCD9C4 /* Nivel3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */; };
+		CF7BB6F022B8FB2F00BCD9C4 /* Nivel4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */; };
+		CF7BB6F222B8FB3C00BCD9C4 /* Nivel5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */; };
+		CF7BB6F422B9062C00BCD9C4 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		CF1A1B8E22B8BED30067E392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JugarController.swift; sourceTree = "<group>"; };
+		CF7BB6E922B8F12A00BCD9C4 /* Nivel1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel1Controller.swift; sourceTree = "<group>"; };
+		CF7BB6EB22B8FB1300BCD9C4 /* Nivel2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel2Controller.swift; sourceTree = "<group>"; };
+		CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel3Controller.swift; sourceTree = "<group>"; };
+		CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel4Controller.swift; sourceTree = "<group>"; };
+		CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel5Controller.swift; sourceTree = "<group>"; };
+		CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,12 @@
 				CF1A1B8E22B8BED30067E392 /* Info.plist */,
 				CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */,
 				CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */,
+				CF7BB6E922B8F12A00BCD9C4 /* Nivel1Controller.swift */,
+				CF7BB6EB22B8FB1300BCD9C4 /* Nivel2Controller.swift */,
+				CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */,
+				CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */,
+				CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */,
+				CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */,
 			);
 			path = "The-Great-Sound-Experiment-iOS";
 			sourceTree = "<group>";
@@ -142,9 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1A1B8522B8BECB0067E392 /* ViewController.swift in Sources */,
+				CF7BB6EC22B8FB1300BCD9C4 /* Nivel2Controller.swift in Sources */,
 				CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */,
+				CF7BB6F422B9062C00BCD9C4 /* SignupController.swift in Sources */,
 				CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */,
+				CF7BB6EA22B8F12A00BCD9C4 /* Nivel1Controller.swift in Sources */,
+				CF7BB6EE22B8FB2300BCD9C4 /* Nivel3Controller.swift in Sources */,
 				CF1A1B8322B8BECB0067E392 /* AppDelegate.swift in Sources */,
+				CF7BB6F222B8FB3C00BCD9C4 /* Nivel5Controller.swift in Sources */,
+				CF7BB6F022B8FB2F00BCD9C4 /* Nivel4Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
