@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  JugarController.swift
 //  The-Great-Sound-Experiment-iOS
 //
 //  Created by Jorge on 18/06/2019.
@@ -8,19 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var signupButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+class JugarController: UIViewController {
+    
+    @IBOutlet weak var playButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        playButton.layer.cornerRadius = 6
         
-        signupButton.layer.cornerRadius = 6
-        loginButton.layer.cornerRadius = 6
     }
-
-
+    
+    
 }
-
 

@@ -12,6 +12,8 @@
 		CF1A1B8822B8BECB0067E392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8622B8BECB0067E392 /* Main.storyboard */; };
 		CF1A1B8A22B8BED30067E392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8922B8BED30067E392 /* Assets.xcassets */; };
 		CF1A1B8D22B8BED30067E392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8B22B8BED30067E392 /* LaunchScreen.storyboard */; };
+		CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */; };
+		CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CF1A1B8922B8BED30067E392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1A1B8C22B8BED30067E392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1A1B8E22B8BED30067E392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JugarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				CF1A1B8922B8BED30067E392 /* Assets.xcassets */,
 				CF1A1B8B22B8BED30067E392 /* LaunchScreen.storyboard */,
 				CF1A1B8E22B8BED30067E392 /* Info.plist */,
+				CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */,
+				CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */,
 			);
 			path = "The-Great-Sound-Experiment-iOS";
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1A1B8522B8BECB0067E392 /* ViewController.swift in Sources */,
+				CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */,
+				CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */,
 				CF1A1B8322B8BECB0067E392 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
