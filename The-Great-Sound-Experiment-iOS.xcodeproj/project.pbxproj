@@ -3,15 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2529FC3B7648D46C6907AD22 /* Pods_The_Great_Sound_Experiment_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8E355AA04A0E0A45C293BA /* Pods_The_Great_Sound_Experiment_iOS.framework */; };
 		CF1A1B8322B8BECB0067E392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A1B8222B8BECB0067E392 /* AppDelegate.swift */; };
 		CF1A1B8522B8BECB0067E392 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A1B8422B8BECB0067E392 /* ViewController.swift */; };
 		CF1A1B8822B8BECB0067E392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8622B8BECB0067E392 /* Main.storyboard */; };
 		CF1A1B8A22B8BED30067E392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8922B8BED30067E392 /* Assets.xcassets */; };
 		CF1A1B8D22B8BED30067E392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A1B8B22B8BED30067E392 /* LaunchScreen.storyboard */; };
+		CF70434A22CC8DE500091FA7 /* pruebascroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70434922CC8DE500091FA7 /* pruebascroll.swift */; };
+		CF70434C22CDF22B00091FA7 /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70434B22CDF22B00091FA7 /* Resultado.swift */; };
+		CF70434E22CDF8A000091FA7 /* Partida.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70434D22CDF8A000091FA7 /* Partida.swift */; };
 		CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */; };
 		CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */; };
 		CF7BB6EA22B8F12A00BCD9C4 /* Nivel1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6E922B8F12A00BCD9C4 /* Nivel1Controller.swift */; };
@@ -19,17 +23,24 @@
 		CF7BB6EE22B8FB2300BCD9C4 /* Nivel3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */; };
 		CF7BB6F022B8FB2F00BCD9C4 /* Nivel4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */; };
 		CF7BB6F222B8FB3C00BCD9C4 /* Nivel5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */; };
-		CF7BB6F422B9062C00BCD9C4 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */; };
+		CF9B25A922D5F9760001853B /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B25A822D5F9760001853B /* StatsController.swift */; };
+		CF9B25AB22D5FE670001853B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B25AA22D5FE670001853B /* ProfileController.swift */; };
+		CFDA6E6322D745CD0012E0F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FAD3F2FD7C555D4FA1AF366 /* Pods-The-Great-Sound-Experiment-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Great-Sound-Experiment-iOS.debug.xcconfig"; path = "Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5C8E355AA04A0E0A45C293BA /* Pods_The_Great_Sound_Experiment_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Great_Sound_Experiment_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1A1B7F22B8BECB0067E392 /* The-Great-Sound-Experiment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Great-Sound-Experiment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1A1B8222B8BECB0067E392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF1A1B8422B8BECB0067E392 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF1A1B8722B8BECB0067E392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF1A1B8922B8BED30067E392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF1A1B8922B8BED30067E392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/jorge/Documents/Proyectos iOS/The-GreatSoundExperiment-iOS/The-Great-Sound-Experiment-iOS/The-Great-Sound-Experiment-iOS/Assets.xcassets"; sourceTree = "<absolute>"; };
 		CF1A1B8C22B8BED30067E392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1A1B8E22B8BED30067E392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF70434922CC8DE500091FA7 /* pruebascroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebascroll.swift; sourceTree = "<group>"; };
+		CF70434B22CDF22B00091FA7 /* Resultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resultado.swift; sourceTree = "<group>"; };
+		CF70434D22CDF8A000091FA7 /* Partida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partida.swift; sourceTree = "<group>"; };
 		CF7BB6E522B8CB7400BCD9C4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CF7BB6E722B8D6A900BCD9C4 /* JugarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JugarController.swift; sourceTree = "<group>"; };
 		CF7BB6E922B8F12A00BCD9C4 /* Nivel1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel1Controller.swift; sourceTree = "<group>"; };
@@ -37,7 +48,10 @@
 		CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel3Controller.swift; sourceTree = "<group>"; };
 		CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel4Controller.swift; sourceTree = "<group>"; };
 		CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel5Controller.swift; sourceTree = "<group>"; };
-		CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		CF9B25A822D5F9760001853B /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
+		CF9B25AA22D5FE670001853B /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		E8B76FE7BF5161C28E75A2AB /* Pods-The-Great-Sound-Experiment-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Great-Sound-Experiment-iOS.release.xcconfig"; path = "Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2529FC3B7648D46C6907AD22 /* Pods_The_Great_Sound_Experiment_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32AA555C6B90D07EAFE23F7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C8E355AA04A0E0A45C293BA /* Pods_The_Great_Sound_Experiment_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87647B120C655DCD821C0A30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD3F2FD7C555D4FA1AF366 /* Pods-The-Great-Sound-Experiment-iOS.debug.xcconfig */,
+				E8B76FE7BF5161C28E75A2AB /* Pods-The-Great-Sound-Experiment-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF1A1B7622B8BECB0067E392 = {
 			isa = PBXGroup;
 			children = (
 				CF1A1B8122B8BECB0067E392 /* The-Great-Sound-Experiment-iOS */,
 				CF1A1B8022B8BECB0067E392 /* Products */,
+				87647B120C655DCD821C0A30 /* Pods */,
+				32AA555C6B90D07EAFE23F7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +117,12 @@
 				CF7BB6ED22B8FB2300BCD9C4 /* Nivel3Controller.swift */,
 				CF7BB6EF22B8FB2F00BCD9C4 /* Nivel4Controller.swift */,
 				CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */,
-				CF7BB6F322B9062C00BCD9C4 /* SignupController.swift */,
+				CF70434922CC8DE500091FA7 /* pruebascroll.swift */,
+				CF70434B22CDF22B00091FA7 /* Resultado.swift */,
+				CF70434D22CDF8A000091FA7 /* Partida.swift */,
+				CF9B25A822D5F9760001853B /* StatsController.swift */,
+				CF9B25AA22D5FE670001853B /* ProfileController.swift */,
+				CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */,
 			);
 			path = "The-Great-Sound-Experiment-iOS";
 			sourceTree = "<group>";
@@ -95,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF1A1B9122B8BED30067E392 /* Build configuration list for PBXNativeTarget "The-Great-Sound-Experiment-iOS" */;
 			buildPhases = (
+				5083020F5B508A425A2B0E91 /* [CP] Check Pods Manifest.lock */,
 				CF1A1B7B22B8BECB0067E392 /* Sources */,
 				CF1A1B7C22B8BECB0067E392 /* Frameworks */,
 				CF1A1B7D22B8BECB0067E392 /* Resources */,
+				A3A666B203184C91832AF215 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +195,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5083020F5B508A425A2B0E91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The-Great-Sound-Experiment-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A666B203184C91832AF215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF1A1B7B22B8BECB0067E392 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -162,12 +245,17 @@
 				CF1A1B8522B8BECB0067E392 /* ViewController.swift in Sources */,
 				CF7BB6EC22B8FB1300BCD9C4 /* Nivel2Controller.swift in Sources */,
 				CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */,
-				CF7BB6F422B9062C00BCD9C4 /* SignupController.swift in Sources */,
 				CF7BB6E622B8CB7400BCD9C4 /* LoginController.swift in Sources */,
 				CF7BB6EA22B8F12A00BCD9C4 /* Nivel1Controller.swift in Sources */,
+				CF70434E22CDF8A000091FA7 /* Partida.swift in Sources */,
+				CF70434C22CDF22B00091FA7 /* Resultado.swift in Sources */,
+				CF9B25AB22D5FE670001853B /* ProfileController.swift in Sources */,
+				CFDA6E6322D745CD0012E0F1 /* SessionManager.swift in Sources */,
 				CF7BB6EE22B8FB2300BCD9C4 /* Nivel3Controller.swift in Sources */,
+				CF70434A22CC8DE500091FA7 /* pruebascroll.swift in Sources */,
 				CF1A1B8322B8BECB0067E392 /* AppDelegate.swift in Sources */,
 				CF7BB6F222B8FB3C00BCD9C4 /* Nivel5Controller.swift in Sources */,
+				CF9B25A922D5F9760001853B /* StatsController.swift in Sources */,
 				CF7BB6F022B8FB2F00BCD9C4 /* Nivel4Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +400,7 @@
 		};
 		CF1A1B9222B8BED30067E392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FAD3F2FD7C555D4FA1AF366 /* Pods-The-Great-Sound-Experiment-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -329,6 +418,7 @@
 		};
 		CF1A1B9322B8BED30067E392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B76FE7BF5161C28E75A2AB /* Pods-The-Great-Sound-Experiment-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
