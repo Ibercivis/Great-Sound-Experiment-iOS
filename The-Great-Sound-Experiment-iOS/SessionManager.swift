@@ -10,6 +10,7 @@ import UIKit
 
 class SessionManager {
     
+    var enPerfil : Bool = false
     var key_token : String
     var key_username : String
     var key_userId : String
@@ -21,6 +22,7 @@ class SessionManager {
         key_userId = userId
         key_isLoggedIn = isLoggedIn
     }
+    
     
     
     func setKeys(key_token: String, key_username: String, key_userId: String, key_isLoggedIn: Bool){

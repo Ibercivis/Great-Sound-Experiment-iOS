@@ -136,9 +136,36 @@ class pruebascroll: UIViewController {
         }
     }
     
+    
+    
+    func validarDatos(username : String, password : String, email : String, edad : String, sexo : String, formacion : String, headphones : String, precio : String) -> Bool  {
+    
+        if( username != "") {
+            if (password != "") {
+                if (email != ""){
+                    if (edad != "Elegir...") {
+                        if (sexo != "Elegir...") {
+                            if (formacion != "Elegir..."){
+                                if (headphones != "Elegir...") {
+                                    if (precio != "Elegir...") {
+                                        return true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return false
+        
+    }
+    
     func SignUpRequest() {
         
-        if (userText.text! != "") {
+        if (validarDatos(username: userText.text!, password: passwordText.text!, email: emailText.text!, edad: ageButton.currentTitle!, sexo: genderButton.currentTitle!, formacion: formationButton.currentTitle!, headphones: headphonesButton.currentTitle!, precio: priceButton.currentTitle!) == true) {
             
             let urlString = "https://gse.ibercivis.es/signup.php"
             print(userText.text!)
@@ -184,8 +211,8 @@ class pruebascroll: UIViewController {
                 }
             }
             
-        } else { self.toastMessage("Debes escribir nombre de usuario y contraseña")
-            print("Debes escribir nombre de usuario y contraseña")
+        } else { self.toastMessage("Revisa tus datos. Tienes que completar todos los campos.")
+            print("Revisa tus datos. Tienes que completar todos los campos.")
             
         }
         

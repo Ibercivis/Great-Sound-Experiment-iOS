@@ -9,8 +9,56 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Alamofire
+
+struct UpdateStruct {
+    var result : Int
+    var username : String
+    var email : String
+    var password : String
+    var edad : String
+    var sexo : String
+    var formacion_musical : String
+    var rango_precio : String
+    var tipo_auriculares : String
+    
+    init(json: [String : Any]) {
+        
+        result = json["result"] as? Int ?? 0
+        username = json["username"] as? String ?? ""
+        email = json["email"] as? String ?? ""
+        password = json["password"] as? String ?? ""
+        edad = json["edad"] as? String ?? ""
+        sexo = json["sexo"] as? String ?? ""
+        formacion_musical = json["formacion_musical"] as? String ?? ""
+        rango_precio = json["rango_precio"] as? String ?? ""
+        tipo_auriculares = json["tipo_auriculares"] as? String ?? ""
+        
+    }
+}
+
+struct Sample:Codable{
+    var result : Int
+    var message : String
+    var data : Datos
+    
+    }
+
+
+struct Datos:Codable {
+    var username : String
+    var email : String
+    var edad : String
+    var sexo : String
+    var formacion_musical : String
+    var rango_precio : String
+    var tipo_auriculares : String
+    
+}
 
 class ProfileController: UIViewController {
+    
+    var sample:Sample?
 
     @IBOutlet weak var genderButton: UIButton!
     @IBOutlet weak var genderTable: UITableView!
@@ -22,6 +70,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var HPTable: UITableView!
     @IBOutlet weak var priceButton: UIButton!
     @IBOutlet weak var priceTable: UITableView!
+    @IBOutlet weak var userText: UILabel!
     
     
     @IBOutlet weak var modifyButton: UIButton!
@@ -42,9 +91,25 @@ class ProfileController: UIViewController {
         HPTable.isHidden = true
         priceTable.isHidden = true
         
+        getProfileRequest()
+        
         modifyButton.layer.cornerRadius = 10
         closeSessionButton.layer.cornerRadius = 10
     }
+    
+    @IBAction func lanzarUpdate(_ sender: Any) {
+        actualizarProfile()
+    }
+    
+    
+    @IBAction func cerrarSesion(_ sender: Any) {
+        let session = SessionManager(token: "0", username: "", userId: "0", isLoggedIn: true)
+        session.clearKeys()
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Splash")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func onClickGeneroDD(_ sender: Any) {
         if genderTable.isHidden {
@@ -95,7 +160,139 @@ class ProfileController: UIViewController {
             }
         }
     }
-}
+    
+    func dataFromJSONObject(data: Data) {
+        
+        do {
+            
+            let samples234 : Sample = try JSONDecoder.init().decode(Sample.self, from: data)
+            if(samples234.result == 1){
+            let datauser = samples234.data
+            print(datauser.email)
+               
+            } else {print("Algo ha fallado recibiendo los datos")}
+        } catch {
+            
+            print(error.localizedDescription)
+            
+        }
+        
+    }
+    
+    func getProfileRequest(){
+        
+        var datosdatos : Datos?
+        let preferences = UserDefaults.standard
+        
+        let idUser : String = preferences.value(forKey: "userId") as! String
+        let token : String = preferences.value(forKey: "token") as! String
+    
+        
+        let urlString = "https://gse.ibercivis.es"+"/getUserInfo.php?idUser="+idUser+"&token="+token
+        print(urlString)
+        
+        Alamofire.request(urlString, method: .get, encoding: URLEncoding.default).responseJSON {
+            response in
+            let data = response.data
+            print(response)
+            do {
+                guard let jsonArray = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String : Any] else { return }
+                
+                print(jsonArray)
+                
+                do {
+                    
+                    let samples234 : Sample = try JSONDecoder.init().decode(Sample.self, from: data!)
+                    if(samples234.result == 1){
+                        let datauser = samples234.data
+                        self.userText.text = datauser.username
+                        print(datauser.username)
+                        self.genderButton.setTitle("\(datauser.sexo)", for: .normal)
+                        self.animateTable(toogle: true, latabla: self.genderTable)
+                        self.ageButton.setTitle(datauser.edad, for: .normal)
+                        self.animateTable(toogle: true, latabla: self.ageTable)
+                        self.formationButton.setTitle("\(datauser.formacion_musical)", for: .normal)
+                        self.animateTable(toogle: true, latabla: self.formationTable)
+                        self.HPButton.setTitle("\(datauser.tipo_auriculares)", for: .normal)
+                        self.animateTable(toogle: true, latabla: self.HPTable)
+                        self.priceButton.setTitle("\(datauser.rango_precio)", for: .normal)
+                        self.animateTable(toogle: true, latabla: self.priceTable)
+                    }
+                    
+                } catch {print(error.localizedDescription)}
+            } catch {
+                print("Error serializing JSON")
+                self.toastMessage("Algo ha fallado obteniendo sus datos.")
+            }
+            
+            
+            
+            
+            
+            switch response.result {
+            case .success:
+                print(response)
+                
+                break
+            case .failure(let error):
+                
+                print(error)
+            }
+        }
+        
+    }
+    
+    func actualizarProfile(){
+        let preferences = UserDefaults.standard
+        
+        let idUser : String = preferences.value(forKey: "userId") as! String
+        let token : String = preferences.value(forKey: "token") as! String
+        
+        
+        let urlString = "https://gse.ibercivis.es/updateUserInfo.php"
+        
+        Alamofire.request(urlString, method: .post, parameters: ["idUser": idUser, "token": token, "edad": ageButton.currentTitle!, "sexo": genderButton.currentTitle!, "formacion_musical": formationButton.currentTitle!, "tipo_auriculares": HPButton.currentTitle!, "rango_precio": priceButton.currentTitle! ],encoding: URLEncoding.default, headers: nil).responseJSON {
+            response in
+            let data = response.data
+            print(response)
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String : Any] else { return }
+                
+                let course = UpdateStruct(json: json)
+                
+                
+                
+                if(course.result == 1) {
+                    
+                    
+                    self.toastMessage("Información actualizada")
+                } else {self.toastMessage("Algo ha fallado. Revise sus datos.")}
+                
+            } catch {
+                print("Error serializing JSON")
+                self.toastMessage("Algo ha fallado. Revise sus datos.")
+            }
+            
+            
+            
+            
+            
+            switch response.result {
+            case .success:
+                print(response)
+                
+                break
+            case .failure(let error):
+                
+                print(error)
+            }
+        }
+        
+        
+    }
+        
+    }
+
 
 extension ProfileController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

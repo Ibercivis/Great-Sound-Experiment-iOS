@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Alamofire
 
 class Nivel5Controller: UIViewController {
     
@@ -220,13 +221,15 @@ class Nivel5Controller: UIViewController {
                         audio2.setImage(UIImage(named: "audio2_off"), for: .normal)
                         audio1.setImage(UIImage(named: "audio1_off"), for: .normal)
                         self.toastMessage("You're right! Keep playing")
+                        gameRequest(elnivel: 5, acierto: 1)
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
                 if (numeroPartidas == 2) {
@@ -237,13 +240,15 @@ class Nivel5Controller: UIViewController {
                         audio2.setImage(UIImage(named: "audio2_off"), for: .normal)
                         audio1.setImage(UIImage(named: "audio1_off"), for: .normal)
                         self.toastMessage("You're right! Keep playing")
+                        gameRequest(elnivel: 5, acierto: 1)
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
                 if (numeroPartidas == 3) {
@@ -255,11 +260,12 @@ class Nivel5Controller: UIViewController {
                         self.toastMessage("Congratulations! You have overcome the challenge!")
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
             }
@@ -281,13 +287,15 @@ class Nivel5Controller: UIViewController {
                         audio2.setImage(UIImage(named: "audio2_off"), for: .normal)
                         audio1.setImage(UIImage(named: "audio1_off"), for: .normal)
                         self.toastMessage("You're right! Keep playing")
+                        gameRequest(elnivel: 5, acierto: 1)
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
                 if (numeroPartidas == 2) {
@@ -299,34 +307,66 @@ class Nivel5Controller: UIViewController {
                         audio2.setImage(UIImage(named: "audio2_off"), for: .normal)
                         audio1.setImage(UIImage(named: "audio1_off"), for: .normal)
                         self.toastMessage("You're right! Keep playing")
+                        gameRequest(elnivel: 5, acierto: 1)
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
                 if (numeroPartidas == 3) {
                     if (resultadoFinal == 2) {
-                        
+                        gameRequest(elnivel: 5, acierto: 1)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Congratulations! You have overcome the challenge!")
+                        
                     }
                     else {
-                        
+                        gameRequest(elnivel: 5, acierto: 0)
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Stats")
                         self.present(newViewController, animated: true, completion: nil)
                         self.toastMessage("Oh no! You have failed")
+                        
                     }
                 }
             }
         }
         numeroPartidas = (numeroPartidas + 1)
+    }
+    
+    func gameRequest(elnivel: Int, acierto: Int) {
+        
+        
+        let urlString = "https://gse.ibercivis.es/game.php"
+        let preferences = UserDefaults.standard
+        
+        let idUser : String = preferences.value(forKey: "userId") as! String
+        let token : String = preferences.value(forKey: "token") as! String
+        
+        
+        Alamofire.request(urlString, method: .post, parameters: ["idUser": idUser, "token" : token, "level" : elnivel, "successs": acierto ],encoding: URLEncoding.default, headers: nil).responseJSON {
+            response in
+            let data = response.data
+            print(response)
+            
+            switch response.result {
+            case .success:
+                print(response)
+                
+                break
+            case .failure(let error):
+                
+                print(error)
+            }
+        }
+        
     }
     
 }

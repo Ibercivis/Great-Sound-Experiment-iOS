@@ -25,6 +25,7 @@
 		CF7BB6F222B8FB3C00BCD9C4 /* Nivel5Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */; };
 		CF9B25A922D5F9760001853B /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B25A822D5F9760001853B /* StatsController.swift */; };
 		CF9B25AB22D5FE670001853B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B25AA22D5FE670001853B /* ProfileController.swift */; };
+		CFC0B12D22D89A070098E465 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0B12C22D89A070098E465 /* SplashController.swift */; };
 		CFDA6E6322D745CD0012E0F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		CF7BB6F122B8FB3C00BCD9C4 /* Nivel5Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nivel5Controller.swift; sourceTree = "<group>"; };
 		CF9B25A822D5F9760001853B /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		CF9B25AA22D5FE670001853B /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		CFC0B12C22D89A070098E465 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		E8B76FE7BF5161C28E75A2AB /* Pods-The-Great-Sound-Experiment-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Great-Sound-Experiment-iOS.release.xcconfig"; path = "Target Support Files/Pods-The-Great-Sound-Experiment-iOS/Pods-The-Great-Sound-Experiment-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				CF9B25A822D5F9760001853B /* StatsController.swift */,
 				CF9B25AA22D5FE670001853B /* ProfileController.swift */,
 				CFDA6E6222D745CD0012E0F1 /* SessionManager.swift */,
+				CFC0B12C22D89A070098E465 /* SplashController.swift */,
 			);
 			path = "The-Great-Sound-Experiment-iOS";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC0B12D22D89A070098E465 /* SplashController.swift in Sources */,
 				CF1A1B8522B8BECB0067E392 /* ViewController.swift in Sources */,
 				CF7BB6EC22B8FB1300BCD9C4 /* Nivel2Controller.swift in Sources */,
 				CF7BB6E822B8D6A900BCD9C4 /* JugarController.swift in Sources */,

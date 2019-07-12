@@ -66,7 +66,7 @@ class LoginController: UIViewController {
                         session.setKeys(key_token: course.token, key_username: course.username, key_userId: course.idUser, key_isLoggedIn: true)
                         
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Jugar")
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Tab")
                         self.present(newViewController, animated: true, completion: nil)
                     } else {self.toastMessage("Algo ha fallado. Revise sus datos.")}
                     
