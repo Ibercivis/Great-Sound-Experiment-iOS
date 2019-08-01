@@ -62,20 +62,24 @@ class pruebascroll: UIViewController {
     @IBOutlet weak var applySignButton: UIButton!
     
     var age = ["-20","21-30","31-60", "61-70", "71-80", "80+"]
-    var gender = ["Male", "Female", "Other"]
-    var formation = ["None", "At school", "Extracurricular", "Conservatory"]
-    var headphones = ["Inear", "Headset"]
-    var priceRange = ["-10€","10-20€", "20-50€", "50-100€", "+100€"]
+    var gender = ["Hombre", "Mujer", "NS/NC"]
+    var formation = ["Ninguna", "En el colegio", "Extraescolar", "Conservatorio"]
+    var headphones = ["Inear", "Diadema", "Inear BT", "Diadema BT"]
+    var priceRange = ["Menos de 10€","10-20€", "20-50€", "50-100€", "Más de 100€"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         genderTable.isHidden = false
         ageTable.isHidden = false
-        formationTable.isHidden = true
-        headphonesTable.isHidden = true
-        priceTable.isHidden = true
+        formationTable.isHidden = false
+        headphonesTable.isHidden = false
+        priceTable.isHidden = false
         // Do any additional setup after loading the view, typically from a nib.
         applySignButton.layer.cornerRadius = 10
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     @IBAction func lanzarSignUpRequest(_ sender: Any) {

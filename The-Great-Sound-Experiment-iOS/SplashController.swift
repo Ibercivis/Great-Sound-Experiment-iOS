@@ -15,6 +15,7 @@ class SplashController: UIViewController {
         super.viewDidAppear(animated)
         let preferences = UserDefaults.standard
         
+        if (preferences.value(forKey: "userId") != nil) {
         let idUser : String = preferences.value(forKey: "userId") as! String
         print(idUser)
         if (idUser.isEmpty == true){
@@ -28,6 +29,11 @@ class SplashController: UIViewController {
         } else {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Tab")
+            present(newViewController, animated: true, completion: nil)
+        }
+        } else {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Nav")
             present(newViewController, animated: true, completion: nil)
         }
     }
